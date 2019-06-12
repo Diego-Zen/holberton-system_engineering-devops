@@ -1,5 +1,13 @@
-# Shell Basics
+# Shell Basics project
 
-**Introduction**
+## Introduction
 
-Shell basics
+Initial repository for shell project
+
+## Date
+
+2019
+
+## Mainteiner
+
+@Diego-Zen
