@@ -8,6 +8,6 @@ Initial repository for shell project
 
 2019
 
-## Mainteiner
+## Maintainer
 
 @Diego-Zen
