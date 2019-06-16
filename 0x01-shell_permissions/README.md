@@ -1,4 +1,4 @@
-# Sheel permissions project
+# Shell permissions project
 
 ## Description
 
