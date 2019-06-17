@@ -7,87 +7,117 @@ Scripts using special characters and I/O redirections
 ### First script
 *Hello World*
 
-Changes the user ID 'su name_user'
+Print 'Hello,World' `echo "Hello, World`
 
 ### Second script
-*Who am I*
+*Confused smiley*
 
-Print userid current user 'whoami'
+Print a confused smiley `echo "\"(Ôo)'"`
 
 ### Third script
-*Groups*
+*Let's display a file*
 
-Print all groups the current user is part of 'groups'
+Print contents of a file `cat /etc/passwd`
 
 ### Forth script
-*New owner*
+*What about 2*
 
-Change the owner of the file 'chown' you some_file'
+Print content of '/etc/passwd' and '/etc/hosts' `cat /etc/passwd /etc/hosts`
 
 ### Fifth script
-*Empty!*
+*Last lines of a file*
 
-Creates an empty file called hello 'touch hello'
+Print the last 10 lines `tail -n 10 /etc/passwd`
 
 ### Sixth script
-*Execute*
+*I'd prefer the first ones actually*
 
-Adds execute permissions to file hello 'chmod u+x hello'
+Print the first 10 lines `head -n 10 /etc/passwd`
 
 ### Seventh script
-*Multiple permissions*
+*Line #2*
 
-Adds multiple permissions to hello file 'chmod ug+x,o+r hello'
+Print the third line of a file `head -n 3 iacta | tail -n 1`
 
 ### Eighth script
-*Everybody*
+*It is a good file that cuts iron without making a noise*
 
-Adds execution permissions to everyone to the file hello 'chmod ugo+x hello'
+Create a file containing the text 'Holberton School' `echo "Holberton School" > \\*\\\\\''"'Holberton\ School'"'\\\'\\\\*$\\?\\*\\*\\*\\*\\*:\)`
 
 ### Ninth script
-*James Bond*
+*Save current state of directory*
 
-Set permission as 007 'chmod 007 hello'
+Writes into a file the result of a command `ls -la > ls_cwd_content`
 
 ### Tenth script
-*John Doe*
+*Duplicate last line*
 
-Set specific permissions 'chmod 753 hello'
+Duplicate the last line of the file `tail -n 1 iacta >> iacta`
 
 ### Eleventh script
-*Look in the mirror*
+*No more javascript*
 
-Set same permission to files 'chmod --reference=olleh hello'
+Delete al the regular files with '.js' extension in current directory as in its subfolders `find ./ -type f -name "*.js" -delete`
 
 ### Twelfth script
-*Directories*
+*Don't just count your directories, make your directories count*
 
-Adds execute permissions to all subdirectories 'chmod -R ugo+X *'
+Count the number of directories and sub-directories `find -mindepth 1 -type d | wc -l`
 
 ### Thirteenth script
-*More directories*
+*What's new*
 
-Create a directory with permissions 751 'mkdir -m 751 dir_holberton'
+Print the 10 newest files in the current directory `ls -t | head`
 
 ### Fourteenth script
-*Change group*
+*Being unique is better than being perfect*
 
-Changes the group owner 'chgrp holberton hello'
+Print only the words that appear exactly once `sort | uniq --unique`
 
 ### Fifteenth script
-*Owner and group*
+*It must be in that file*
 
-Changes the owner an group owner for all files and directories 'chown -R betty:holberton .'
+Print lines containing the pattern "root" from a file `grep "root" /etc/passwd`
 
 ### Sixteenth script
-*Symbolic links*
+*Count that word*
 
-Changes the owner and the group of symbolic file 'chown -h betty:holberton _hello'
+Print the number of lines that contains the pattern "bin" `grep "bin" /etc/passwd | wc -l`
 
 ### Seventeenth script
-*If only*
+*What's next*
 
-Changes owner of file only if 'chown --from=guillaume betty hello'
+Print lines containing the pattern "root" and 3 lines after `grep -A3 "root" /etc/passwd`
+
+### Eighteenth script
+*I hate bins*
+
+Print al the lines that do not contain the pattern "bin" `grep -v "bin" /etc/passwd`
+
+### Nineteenth script
+*Letters only please*
+
+Print lines starting with a letter `grep -i ^[a-z] /etc/ssh/sshd_config`
+
+### Twentieth script
+*A to Z*
+
+Replace all characters 'A' and 'c' from input to 'Z' and 'e' respectively `tr [A][c] [Z][e]`
+
+### Twenty-first script
+*Without C, you would live in hiago*
+
+Removes all letters 'c' and 'C' from input `tr -d [c][C]`
+
+### Twenty-second script
+*esreveR*
+
+Reverse its input `rev`
+
+### Twenty-third script
+*DJ Cut Killer*
+
+Print all users and their home directories sorted by users `cut -d : -f 1,6 /etc/passwd | sort`
 
 ## Maintainer
 
