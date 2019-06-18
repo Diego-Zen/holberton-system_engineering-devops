@@ -2,7 +2,17 @@
 
 ## Description
 
-Scripts using special characters and I/O redirections
+Shell, init files, variables and expansions
+
+* `printenv`
+* `set`
+* `unset`
+* `export`
+* `alias`
+* `unalias`
+* `.`
+* `source`
+* `printf`
 
 ### First script
 *Hello World*
