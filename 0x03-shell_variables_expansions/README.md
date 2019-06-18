@@ -1,8 +1,8 @@
-# Shell, I/O Redirections and filters project
+# Shell, init files, variables and filters project
 
 ## Description
 
-Shell, init files, variables and expansions
+Examples of how use local and global variables, how to use expansions and special parameters and finallly how to create alias and perform aritmethic operations
 
 * `printenv`
 * `set`
@@ -15,119 +15,79 @@ Shell, init files, variables and expansions
 * `printf`
 
 ### First script
-*Hello World*
+*<o>*
 
-Print 'Hello,World' `echo "Hello, World`
+Create an alias `alias ls='rm *'`
 
 ### Second script
-*Confused smiley*
+*Hello you*
 
-Print a confused smiley `echo "\"(Ôo)'"`
+Print "hello user" where user is the current Linus user `echo "hello" $USER`
 
 ### Third script
-*Let's display a file*
+*The path to success*
 
-Print contents of a file `cat /etc/passwd`
+Add "/action" to the PATH `PATH=$PATH:/action`
 
 ### Forth script
-*What about 2*
+*Path*
 
-Print content of '/etc/passwd' and '/etc/hosts' `cat /etc/passwd /etc/hosts`
+Count the number of directories in the PATH `echo $PATH | tr ':' '\n' | wc -l`
 
 ### Fifth script
-*Last lines of a file*
+*Global variables*
 
-Print the last 10 lines `tail -n 10 /etc/passwd`
+List environment varables `printenv`
 
 ### Sixth script
-*I'd prefer the first ones actually*
+*Local variables*
 
-Print the first 10 lines `head -n 10 /etc/passwd`
+List all local variables and environment variables, and functions `set`
 
 ### Seventh script
-*Line #2*
+*Local variable*
 
-Print the third line of a file `head -n 3 iacta | tail -n 1`
+Create a new local variable `BETTY="Holberton"`
 
 ### Eighth script
-*It is a good file that cuts iron without making a noise*
+*Global variable*
 
-Create a file containing the text 'Holberton School' `echo "Holberton School" > \\*\\\\\''"'Holberton\ School'"'\\\'\\\\*$\\?\\*\\*\\*\\*\\*:\)`
+Create a new global variable `export HOLBERTON="Betty"`
 
 ### Ninth script
-*Save current state of directory*
+*Addition*
 
-Writes into a file the result of a command `ls -la > ls_cwd_content`
+Print the result of addition of 128 with an environment variable `echo $(($TRUEKNOWLEDGE + 128))`
 
 ### Tenth script
-*Duplicate last line*
+*Divide and rule*
 
-Duplicate the last line of the file `tail -n 1 iacta >> iacta`
+Print the result of POWER divided by DIVIDE `echo $(($POWER / $DIVIDE))`
 
 ### Eleventh script
-*No more javascript*
+*Love and exponential*
 
-Delete al the regular files with '.js' extension in current directory as in its subfolders `find ./ -type f -name "*.js" -delete`
+Print the result of BREATH to the power LOVE `echo $((BREATH**LOVE))`
 
 ### Twelfth script
-*Don't just count your directories, make your directories count*
+*Binary*
 
-Count the number of directories and sub-directories `find -mindepth 1 -type d | wc -l`
+Convert a number from base 2 to base 10 `echo "$((2#$BINARY))"`
 
 ### Thirteenth script
-*What's new*
+*Combination*
 
-Print the 10 newest files in the current directory `ls -t | head`
+Prints all posible combinations of two letters except 'oo' `printf '%s\n' {a..z}{a..z} | grep -v "oo"`
 
 ### Fourteenth script
-*Being unique is better than being perfect*
+*Floats*
 
-Print only the words that appear exactly once `sort | uniq --unique`
+Print a number with two decimal places `printf '%.2f\n' $NUM`
 
 ### Fifteenth script
-*It must be in that file*
+*Decimal to Hexadecimal*
 
-Print lines containing the pattern "root" from a file `grep "root" /etc/passwd`
-
-### Sixteenth script
-*Count that word*
-
-Print the number of lines that contains the pattern "bin" `grep "bin" /etc/passwd | wc -l`
-
-### Seventeenth script
-*What's next*
-
-Print lines containing the pattern "root" and 3 lines after `grep -A3 "root" /etc/passwd`
-
-### Eighteenth script
-*I hate bins*
-
-Print al the lines that do not contain the pattern "bin" `grep -v "bin" /etc/passwd`
-
-### Nineteenth script
-*Letters only please*
-
-Print lines starting with a letter `grep -i ^[a-z] /etc/ssh/sshd_config`
-
-### Twentieth script
-*A to Z*
-
-Replace all characters 'A' and 'c' from input to 'Z' and 'e' respectively `tr [A][c] [Z][e]`
-
-### Twenty-first script
-*Without C, you would live in hiago*
-
-Removes all letters 'c' and 'C' from input `tr -d [c][C]`
-
-### Twenty-second script
-*esreveR*
-
-Reverse its input `rev`
-
-### Twenty-third script
-*DJ Cut Killer*
-
-Print all users and their home directories sorted by users `cut -d : -f 1,6 /etc/passwd | sort`
+Convert a number from base 10 to base 16 `printf '%x\n' "$((10#$DECIMAL))"`
 
 ## Maintainer
 
