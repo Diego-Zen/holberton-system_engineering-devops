@@ -20,7 +20,7 @@ Change from working directory to home
 ### Fourth script
 *listfiles*
 
-Print the the contents of the current directory in a long format 
+Print the the contents of the current directory in a long format
 
 ### Fifth script
 *listmorefiles*

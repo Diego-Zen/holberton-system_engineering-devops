@@ -7,7 +7,7 @@ Scripts using special characters and I/O redirections
 ### First script
 *Hello World*
 
-Print 'Hello,World' `echo "Hello, World`
+Print 'Hello,World' `echo "Hello, World"`
 
 ### Second script
 *Confused smiley*
@@ -121,8 +121,8 @@ Print all users and their home directories sorted by users `cut -d : -f 1,6 /etc
 
 ## Maintainer
 
-@Diego-zen
+@diegozencode
 
 ## School
 
-@HolbertoN
+@Holberton school

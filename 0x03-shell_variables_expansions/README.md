@@ -91,8 +91,8 @@ Convert a number from base 10 to base 16 `printf '%x\n' "$((10#$DECIMAL))"`
 
 ## Maintainer
 
-@Diego-zen
+@diegozencode
 
 ## School
 
-@HolbertoN
+@Holberton School

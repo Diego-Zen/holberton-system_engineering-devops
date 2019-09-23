@@ -91,8 +91,8 @@ Changes owner of file only if 'chown --from=guillaume betty hello'
 
 ## Maintainer
 
-@Diego-zen
+@diegozencode
 
 ## School
 
-@HolbertoN
+@Holberton School
