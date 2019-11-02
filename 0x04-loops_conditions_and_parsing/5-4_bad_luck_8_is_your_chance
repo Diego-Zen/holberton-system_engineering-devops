@@ -1,1 +1,19 @@
 #!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+# 4 bad luck, 8 is your chance
+c=1
+while [ $c -le 10 ]
+do
+    if [ $c = 4 ]
+    then
+	echo "bad luck"
+    else
+	if [ $c = 8 ]
+	then
+	    echo "good luck"
+	else
+	    echo "Holberton School"
+	fi
+    fi
+    c=$(( c + 1))
+done
