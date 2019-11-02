@@ -1,1 +1,23 @@
 #!/usr/bin/env bash
+# This script is displaying the numbers of 1 to 20 superstitions numbers
+c=1
+while [ $c -le 20 ]
+do
+    case $c in
+	4)
+	    echo "$c"
+	    echo "bad luck from China"
+	    ;;
+	9)
+	    echo "$c"
+	    echo "bad luck from Japan"
+	    ;;
+	17)
+	    echo "$c"
+	    echo "bad luck form Italy"
+	    ;;
+	*)
+	    echo "$c"
+    esac
+    c=$(( c + 1))
+done
