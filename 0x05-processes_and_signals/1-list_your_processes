@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # This script list all processes in a user oriented format
-ps -uaf
+# ps -uaf
+ps auxf
