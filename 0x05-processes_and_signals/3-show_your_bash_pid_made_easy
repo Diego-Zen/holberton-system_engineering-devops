@@ -1,1 +1,3 @@
 #!/usr/bin/env bash
+# This script list all processes by PID with name
+pgrep -l bash
