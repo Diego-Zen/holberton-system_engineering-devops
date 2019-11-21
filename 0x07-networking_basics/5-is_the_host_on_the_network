@@ -3,7 +3,7 @@
 IP=$1
 if [ "$IP" ]
 then
-    ping -c 4 "$IP"
+    ping -c 5 "$IP"
 else
     echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 fi
