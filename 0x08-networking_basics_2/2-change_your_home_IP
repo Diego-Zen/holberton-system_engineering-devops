@@ -1,3 +1,1 @@
-#!/usr/bin/env bash
-# This script change the IP home address
 ifconfig leth0 127.0.0.2 netmask 255.0.0.0 
