@@ -1,4 +1,5 @@
-# puppet manifest for killing a proces call killmenow
+# puppet manifest for killing a process called killmenow
 exec { 'process-kill'
-    command => 'pkill killmenow'
+  command => 'pkill killmenow',
+  provider => 'shell'
 }
