@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# connect to personal server
 ssh -i ~/.ssh/0-RSA_public_key ubuntu@34.73.136.64
