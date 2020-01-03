@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# configures a brand new ubuntu machine, set custom Nginx response header
+# shellcheck disable=SC2059
+apt -y update
+apt -y install nginx
+service nginx start
+echo "Holberton school web02" > /var/www/html/index.nginx-debian.html
+# header=
+service nginx restart
+service nginx reload
