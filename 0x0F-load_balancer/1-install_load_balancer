@@ -1,3 +1,11 @@
 #!/usr/bin/env bash
-# configures a brand new ubuntu machine, set custom Nginx response header
-apt update
+# install a load balancer
+sudo apt-get update
+sudo apt-get -y install software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-1.8
+sudo apt-get update
+sudo apt-get -y install haproxy=1.8.\*
+options="\n\tbind :80\nbackend mybackend\n\tbalance roundrobin\n\tserver 832-web-01 34.73.136.64:80 check\n\tserver 832-web-02 35.227.66.187:80 check"
+sed -i '/errorfile 504/a frontend myconf' /etc/haproxy/haproxy.cfg
+sed -i "s/frontend myconf/&$options/g" /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
