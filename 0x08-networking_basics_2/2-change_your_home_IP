@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This cript change ips
-ips="\n127.0.0.2 localhost\n8.8.8.8 facebook.com"
+ips="127.0.0.2 localhost\n8.8.8.8 facebook.com"
 cp /etc/hosts ~/hosts.new
-sed -i "s/127.0.0.1 localhost/&$ips/g" /etc/hosts.new
+sed -i "s/127.*/$ips/g" ~/hosts.new
 cat ~/hosts.new > /etc/hosts
