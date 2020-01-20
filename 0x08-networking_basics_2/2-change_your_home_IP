@@ -1,1 +1,6 @@
-ifconfig leth0 127.0.0.2 netmask 255.0.0.0 
+#!/usr/bin/env bash
+# This cript change ips
+ips="\n127.0.0.2 localhost\n8.8.8.8 facebook.com"
+cp /etc/hosts ~/hosts.new
+sed -i "s/127.0.0.1 localhost/&$ips/g" /etc/hosts.new
+cat ~/hosts.new > /etc/hosts
