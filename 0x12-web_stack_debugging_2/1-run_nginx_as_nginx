@@ -1,1 +1,5 @@
 #!/usr/bin/env bash
+# script for changing user to run nginx with nginx user
+sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
+sudo pkill nginx
+sudo -u nginx service nginx start
