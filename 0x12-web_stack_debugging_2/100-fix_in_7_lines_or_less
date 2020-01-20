@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# script for changing user to run nginx with nginx user
+chmod 404 /etc/nginx/nginx.conf
+sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
+sudo pkill apache2
+sudo -u nginx service nginx start
