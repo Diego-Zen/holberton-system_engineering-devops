@@ -24,7 +24,7 @@ if __name__ == "__main__":
             done = done + 1
 
     print(
-        "Employee {} is done with tasks({}/{})"
+        "Employee {} is done with tasks({}/{}):"
         .format(
             json_data.get('name'),
             done, total
