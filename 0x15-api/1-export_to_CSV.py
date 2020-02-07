@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     json_data = r.json()
     json_data_r2 = r2.json()
-    with open("USER_ID.csv", "w") as csvfile:
+    with open("{}.csv".format(search), "w") as csvfile:
         f = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for task in json_data:
             f.writerow([
