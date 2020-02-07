@@ -21,7 +21,6 @@ if __name__ == "__main__":
     json_data_r2 = r2.json()
     with open("USER_ID.csv", "w") as csvfile:
         f = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-        print(json_data[0].values())
         for task in json_data:
             f.writerow([
                 task.get('userId'),
