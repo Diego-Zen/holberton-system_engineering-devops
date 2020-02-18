@@ -1,4 +1,5 @@
-# Fix bad extension is settings file
-exec {
-    command => "sed -i 's/phpp/php/g' /var/html/wp-settings.php"
+# Fix bad extension in settings file
+exec { 'fix-config':
+  command => "sed -i 's/phpp/php/g' /var/www/html/wp-settings.php",
+  path => ['/bin']
 }
