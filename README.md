@@ -1,13 +1,19 @@
-# Shell Basics project
+# High level programming projects
+![Holberton logo](https://www.holbertonschool.com/holberton-logo.png)
+> Fundations - System Engineering DevOps
 
-## Introduction
+## System Engineering & DevOps
+The objective of this repo is to some scripting and networking.
 
-Initial repository for shell project
-
-## Date
-
-2019
+## Learning objectives
+* Bash.
+* Scripting.
+* Networking.
+* Web stack.
+* Security
+* On call
+* CI/CD
+* Web stack debugging
 
 ## Author
-
-@diegozencode
+* **Diego Monroy** - [diegozencode](https://github.com/diegozencode)
