@@ -1,9 +1,9 @@
-# High level programming projects
+# System engineer & devops projects
 ![Holberton logo](https://www.holbertonschool.com/holberton-logo.png)
 > Fundations - System Engineering DevOps
 
 ## System Engineering & DevOps
-The objective of this repo is to some scripting and networking.
+The objective of this repo is to do some scripting and networking.
 
 ## Learning objectives
 * Bash.
